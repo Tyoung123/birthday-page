@@ -87,11 +87,17 @@ body {
 .birthday-body {
     background: linear-gradient(135deg, #87CEEB, #1E90FF);
     overflow-x: hidden;
+    /* 覆盖全局body的flex居中，改用纵向流式布局 */
+    display:block;
+    min-height: 100dvh;
+    padding: 30px 15px calc(env(safe-area-inset-bottom,20px) + 30px);
 }
 
 .birthday-container {
     text-align: center;
     z-index: 10;
+    /* 去掉垂直居中，让页面可以正常向下延展滚动 */
+    margin:0 auto;
 }
 
 #greeting {
@@ -321,3 +327,7 @@ body {
         transform: scale(0.8);
     }
 } 
+
+*{
+  box-sizing: border-box;
+}
