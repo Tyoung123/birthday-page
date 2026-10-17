@@ -83,21 +83,23 @@ body {
     min-height: 1.2rem;
 }
 
-/* Birthday Page Styles */
-.birthday-body {
+/* Birthday Page Styles ✅ 终极强制重置 */
+body.birthday-body {
     background: linear-gradient(135deg, #87CEEB, #1E90FF);
     overflow-x: hidden;
-    /* 覆盖全局body的flex居中，改用纵向流式布局 */
-    display:block;
+    overflow-y: auto !important;
+    display: block !important;
+    justify-content: unset !important;
+    align-items: unset !important;
     min-height: 100dvh;
-    padding: 30px 15px calc(env(safe-area-inset-bottom,20px) + 30px);
+    padding: 30px 15px calc(env(safe-area-inset-bottom,20px) + 40px) !important;
 }
 
 .birthday-container {
     text-align: center;
     z-index: 10;
-    /* 去掉垂直居中，让页面可以正常向下延展滚动 */
-    margin:0 auto;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 #greeting {
@@ -110,8 +112,9 @@ body {
 
 .cake-container {
     margin: 2rem auto;
-    width: 380px;
-    height: 380px;
+    width: 100%;
+    max-width:380px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -323,11 +326,7 @@ body {
         font-size: 2rem;
     }
     
-    .cake {
+    .cake-image {
         transform: scale(0.8);
     }
 } 
-
-*{
-  box-sizing: border-box;
-}
