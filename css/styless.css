@@ -17,9 +17,9 @@ body {
 */
 .bg {
   width: 100%;
-  background: #ee9ca7;
-  background: -webkit-linear-gradient(top left, #ee9ca7 0%, #ee9ca7 100%);
-  background: linear-gradient(to bottom right, #ee9ca7 0%, #ee9ca7 100%);
+  background: #87cefa;
+  background: -webkit-linear-gradient(top left, #87cefa 0%, #87cefa 100%);
+  background: linear-gradient(to bottom right, #87cefa 0%, #87cefa 100%);
 }
 .velas {
   background: #ffffff;
@@ -520,7 +520,7 @@ body {
 	border-radius:30px;
 	font-size: 23px;
 	text-align:center;
-	background: #ee9ca7;
+	background: #87cefa;
 	transition:all 0.8s;
 }
 .link2 {
