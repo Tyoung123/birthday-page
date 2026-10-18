@@ -1,32 +1,36 @@
 <!doctype html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <style>
-        ::-webkit-scrollbar {
-            width: 0px;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        #iframepage {
-            width:100%;
-            border: none;
-        }
-    </style>
 </head>
+
+<style>
+    .iframepage {
+        -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    /*局部滚动的dom节点*/
+    .scroll-el {
+        overflow: auto;
+    }
+</style>
 
 <body>
     <iframe src="./html/login.html" id="iframepage" scrolling="no" onload="changeFrameHeight()" frameborder="0"
-        marginwidth="0" marginheight="0"></iframe>
-    <!-- 外层这里只加载这一个jQuery，给changeFrameHeight使用 -->
+        style="width:100%" marginwidth="0" marginheight="0"></iframe>
     <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <!-- 这里不要再写 1.8.3 /1.8.4 的script引入！！ -->
+    <script src="js/jquery-1.8.4.min.js" type="text/javascript"></script>
 </body>
+
 </html>
